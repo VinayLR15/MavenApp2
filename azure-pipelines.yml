@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-2022'  # Use Microsoft-hosted agent
+  name:Default  # Use Microsoft-hosted agent
 
 steps:
 - script: echo My first Azure Pipeline for Maven project
