@@ -7,13 +7,14 @@ trigger:
 - master
 
 pool:
-  name:Default
+  vmImage: 'windows-2022'  # Use Microsoft-hosted agent
 
 steps:
-- script: echo Myfirst Azure Pipeline for maven project
+- script: echo My first Azure Pipeline for Maven project
   displayName: 'Run a one-line script'
 
 - script: mvn clean install
-  displayName: 'Build with maven'
+  displayName: 'Build with Maven'
+
 - script: java -jar target/MavenApp2-1.0-SNAPSHOT.jar
-  displayName: 'Running jar'
+  displayName: 'Run the JAR file'
